@@ -35,7 +35,13 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
-
+helper{
+   executed_arg = 2
+   if [ if $# -ne executed_arg]; then
+     echo "please give executed arguments"
+     echo"arg
+}
+ 
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
